@@ -2,9 +2,7 @@ import Navbar from "../Navbar/Navbar";
 import SideNavbar from "../SideNavbar/SideNavbar";
 
 const SingleFile = () => {
-  return (
-    <>
-        return (
+    return (
         <>
             <Navbar />
             <div className='HomeHeading'>
@@ -15,8 +13,6 @@ const SingleFile = () => {
             </div>
         </>
     )
-    </>
-  )
 }
 
 export default SingleFile;

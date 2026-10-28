@@ -13,7 +13,7 @@ function App() {
         <Route path="/create-file" element={<CreateFilePage />} />
         <Route path="/read-file" element={<ReadFilePage />} />
         <Route path="/test-chat" element={<Chat />} />
-        <Route path='/:file' element={<SingleFile />} />
+        <Route path='/singlePage/:file' element={<SingleFile />} />
       </Routes>
     </>
   )

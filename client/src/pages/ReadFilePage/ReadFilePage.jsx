@@ -26,7 +26,7 @@ const ReadFilePage = () => {
                         ) : fileNames.length > 0 ? (
                             <ul>
                                 {fileNames.map((file) => (
-                                    <li key={file}><Link to={{ file }}>{file}</Link></li>
+                                    <li key={file}><Link to={`/singlePage/${file}`}>{file}</Link></li>
                                 ))}
                             </ul>
                         ) : (
