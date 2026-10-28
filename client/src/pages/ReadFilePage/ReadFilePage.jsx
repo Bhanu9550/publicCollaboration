@@ -5,6 +5,7 @@ import FilesContext from '../../contexts/fileContext'
 import "./ReadFilePage.css"
 import { Link } from 'react-router-dom'
 
+
 const ReadFilePage = () => {
     const { dataFiles, Loading } = useContext(FilesContext)
     let fileNames;
@@ -19,17 +20,20 @@ const ReadFilePage = () => {
                 <SideNavbar />
                 <div className='rightContent'>
                     <h1 id='heading'>All Files</h1>
-                    {Loading ? (
-                        <p>Loading files...</p>
-                    ) : fileNames.length > 0 ? (
-                        <ul>
-                            {fileNames.map((file) => (
-                                <li key={file}><Link to={{file}}>{file}</Link></li>
-                            ))}
-                        </ul>
-                    ) : (
-                        <p>No Files</p>
-                    )}
+                    <div className='FilesStyle'>
+                        {Loading ? (
+                            <p>Loading files...</p>
+                        ) : fileNames.length > 0 ? (
+                            <ul>
+                                {fileNames.map((file) => (
+                                    <li key={file}><Link to={{ file }}>{file}</Link></li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p>No Files</p>
+                        )}
+
+                    </div>
                 </div>
             </div>
         </>

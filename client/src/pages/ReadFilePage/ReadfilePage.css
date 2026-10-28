@@ -1,0 +1,46 @@
+
+.FilesStyle {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.FilesStyle ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* LI */
+.FilesStyle li {
+    padding: 15px 20px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    min-width: 150px;
+    transition: 0.3s;
+}
+
+
+.FilesStyle li a {
+    text-decoration: none;
+    color: #334155;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Hover */
+.FilesStyle li:hover {
+    background-color: #f3e8ff;
+    border-color: #9333ea;
+    transform: translateY(-3px);
+}
+
+.FilesStyle li a:hover {
+    color: #7e22ce;
+}
