@@ -1,0 +1,49 @@
+.SideNavbar {
+  background: linear-gradient(135deg, #0f172a, #312e81);
+  width: 15%;
+  height: 90vh;
+  padding: 25px 15px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.SideNavbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.SideNavbar li {
+  margin-bottom: 18px;
+}
+
+.SideNavbar a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+
+  background: #334155;
+  color: #ffffff;
+
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.SideNavbar a:hover {
+  background: #7c3aed;
+  color: #ffffff;
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.active{
+  background-color: #7c3aed !important;
+  font-weight: 900 !important;
+}

@@ -1,0 +1,17 @@
+.HomeHeading {
+    display: flex;
+    min-height: 90vh;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    position: relative;
+    top: 10vh;
+}
+
+.rightContent{
+    width: 74%;
+}
+
+#heading{
+    text-align: center;
+    padding-top: 10px;
+}

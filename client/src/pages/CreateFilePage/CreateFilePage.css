@@ -1,0 +1,97 @@
+
+.Hero {
+    display: flex;
+    min-height: 90vh;
+    background-color: #f8fafc;
+    font-family: Arial, sans-serif;
+    position: relative;
+    top: 10vh;
+}
+
+/* Create File section */
+.create-file {
+    width: 74%;
+    padding: 40px;
+    min-width: 0;
+}
+
+.create-file h1 {
+    font-size: 30px;
+    color: #1e293b;
+    margin: 0 0 30px;
+}
+
+/* Form layout */
+.create-file form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.create-file label {
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.create-file input,
+.create-file textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 22px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.create-file input:focus,
+.create-file textarea:focus {
+    border-color: #7c3aed;
+}
+
+.create-file textarea {
+    height: 180px;
+    resize: vertical;
+}
+
+.create-file button {
+    padding: 12px 24px;
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.create-file button:hover {
+    background-color: #6d28d9;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .Hero {
+        flex-direction: column;
+    }
+
+    .create-file {
+        padding: 20px;
+    }
+
+    .create-file form {
+        padding: 20px;
+        max-width: 100%;
+    }
+}
