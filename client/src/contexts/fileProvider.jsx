@@ -23,7 +23,7 @@ const FilesProvider = ({ children }) => {
     }, []);
 
     return (
-        <FilesContext.Provider value={{dataFiles,  Loading}}>
+        <FilesContext.Provider value={{dataFiles,  Loading, setDataFiles}}>
             {children}
         </FilesContext.Provider>
     );
