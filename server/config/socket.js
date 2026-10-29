@@ -20,10 +20,10 @@ function initSocket(httpServer, Frontend_Origin){
     })
 
     io.on("connection", (socket)=>{
-        console.log(socket.id)
-        socket.on("message:send", (data)=>{
-            socket.broadcast.emit("message:new", data)
-        })
+        // console.log(socket.id)
+        // socket.on("message:send", (data)=>{
+        //     socket.broadcast.emit("message:new", data)
+        // })
 
         socket.on("updateFile:Data", (data)=>{
             try{
