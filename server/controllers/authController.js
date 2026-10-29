@@ -23,6 +23,10 @@ async function allFileNames() {
     return files;
 }
 
+authController.get("/", (req, res)=>{
+  res.send("hello")
+})
+
 authController.get("/getfiles", async(req, res) => {
   try {
     const files = await allFileNames();

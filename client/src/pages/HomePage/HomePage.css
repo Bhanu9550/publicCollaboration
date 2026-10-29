@@ -9,8 +9,7 @@
 
 .rightContent {
     width: 85%;
-    min-width: 0;
-    min-height: 90vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,32 +73,4 @@
 
 .btn-1:active {
     transform: scale(0.97);
-}
-
-@media (max-width: 768px) {
-    .HomeHeading {
-        top: 0;
-    }
-
-    .rightContent {
-        width: 100%;
-        min-height: auto;
-        padding: 25px 15px;
-    }
-
-    #heading {
-        font-size: 28px;
-    }
-
-    .rightContent img {
-        max-width: 400px;
-    }
-
-    .rightContent h2 {
-        font-size: 23px;
-    }
-
-    .rightContent p {
-        font-size: 15px;
-    }
 }

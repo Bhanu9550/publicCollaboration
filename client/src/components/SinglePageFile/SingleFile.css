@@ -5,7 +5,6 @@
     align-items: center;
     width: 85%;
     min-width: 0;
-    /* min-height: calc(100vh - 70px); */
     padding: 25px;
     box-sizing: border-box;
     gap: 20px;

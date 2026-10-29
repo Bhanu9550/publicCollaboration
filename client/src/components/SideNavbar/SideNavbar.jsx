@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom';
+import { IoHomeSharp } from "react-icons/io5";
+import { FaFolderOpen, FaFolder  } from "react-icons/fa";
 import "./SideNavbar.css"
 
 const SideNavbar = () => {
@@ -6,13 +8,13 @@ const SideNavbar = () => {
         <div className="SideNavbar">
             <ul>
                 <li>
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/"><IoHomeSharp />Home</NavLink>
                 </li>
+                {/* <li>
+                    <NavLink to="/createFiles"><FaFolder />My Files</NavLink>
+                </li> */}
                 <li>
-                    <NavLink to="/createFiles">My Files</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/publicFiles">Public Files</NavLink>
+                    <NavLink to="/publicFiles"><FaFolderOpen />Public Files</NavLink>
                 </li>
             </ul>
         </div>

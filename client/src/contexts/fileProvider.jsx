@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import FilesContext from "./fileContext";
-import axios from "axios"
+import api from "../config/axios";
 
 const FilesProvider = ({ children }) => {
     const [dataFiles, setDataFiles] = useState(null);
@@ -10,7 +10,7 @@ const FilesProvider = ({ children }) => {
     useEffect(() => {
         async function getFiles() {
             try {
-                const res = await axios.get("http://localhost:8080/getfiles");
+                const res = await api.get("/getfiles");
                 setDataFiles(res.data);
             } catch (err) {
                 console.log(err.message);

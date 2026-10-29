@@ -1,55 +1,41 @@
 import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import SideNavbar from "../SideNavbar/SideNavbar";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import FilesContext from "../../contexts/fileContext";
 import socket from "../../config/socket";
 import "./SingleFile.css";
 
 const SingleFile = () => {
     const { file } = useParams();
-    const { dataFiles, Loading, setDataFiles } = useContext(FilesContext);
-    const [fileData, setFileData] = useState("");
+    const { dataFiles, setDataFiles } = useContext(FilesContext);
 
     useEffect(() => {
         function handleUpdateData(data) {
-            // if (file == data.file) {
-                setDataFiles(prev => ({
-                    ...prev,
-                    [data.file]: data.fileData
-                }));
-            // }
+            setDataFiles(prev => ({
+                ...prev,
+                [data.file]: data.fileData
+            }));
 
         }
-
         socket.on("updateFile:Data", handleUpdateData)
 
         return(()=>
             socket.off("updateFile:Data", handleUpdateData)
         )
-    }, [file])
+    },[])
 
     function handlingData(event) {
         const updatedData = event.target.value;
 
-        setFileData(updatedData);
+        setDataFiles(prev => (
+            {...prev, [file]: updatedData}
+        ));
 
         socket.emit("updateFile:Data", {
             file,
             fileData: updatedData
         });
-    }
-
-    if (Loading) {
-        return (
-            <>
-                <Navbar />
-                <div className="HomeHeading">
-                    <SideNavbar />
-                    <p>Loading Data...</p>
-                </div>
-            </>
-        );
     }
 
     return (
@@ -64,7 +50,7 @@ const SingleFile = () => {
                     <div className="container">
                         <div className="file-container">
                             <textarea
-                                value={fileData || dataFiles?.[file] || ""}
+                                value={dataFiles?.[file] ?? ""}
                                 onChange={handlingData}
                             />
                         </div>

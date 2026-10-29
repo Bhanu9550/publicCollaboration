@@ -14,16 +14,13 @@ function updateFile(data){
 function initSocket(httpServer, Frontend_Origin){
     io = new Server(httpServer, {
         cors : {
-            origin : Frontend_Origin,
+            origin : [Frontend_Origin, "http://localhost:5173"],
             credentials : true
         }
     })
 
     io.on("connection", (socket)=>{
-        // console.log(socket.id)
-        // socket.on("message:send", (data)=>{
-        //     socket.broadcast.emit("message:new", data)
-        // })
+        console.log(socket.id)
 
         socket.on("updateFile:Data", (data)=>{
             try{
