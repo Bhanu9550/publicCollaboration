@@ -1,46 +1,135 @@
-
-.FilesStyle {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+.publicPageRightContent {
+    width: 85%;
+    min-width: 0;
+    padding: 25px;
+    box-sizing: border-box;
 }
 
+/* Files Container */
+.FilesStyle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
 
+/* Files List */
 .FilesStyle ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    align-items: stretch;
+    gap: 18px;
     list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
 }
 
-/* LI */
+/* Individual File Card */
 .FilesStyle li {
-    padding: 15px 20px;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    min-width: 150px;
-    transition: 0.3s;
+    display: flex;
+    min-width: 0;
+    transition: transform 0.25s ease;
 }
-
 
 .FilesStyle li a {
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    max-width: 240px;
+    min-height: 55px;
+    padding: 16px 22px;
+    box-sizing: border-box;
+
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
     color: #334155;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+
+    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.04);
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-/* Hover */
+/* Hover Effects */
 .FilesStyle li:hover {
-    background-color: #f3e8ff;
-    border-color: #9333ea;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
 
 .FilesStyle li a:hover {
+    background-color: #faf5ff;
+    border-color: #9333ea;
     color: #7e22ce;
+    box-shadow: 0 6px 16px rgba(147, 51, 234, 0.10);
+}
+
+/* Keyboard Accessibility */
+.FilesStyle li a:focus-visible {
+    outline: 2px solid #9333ea;
+    outline-offset: 3px;
+}
+
+/* Loading and Empty Messages */
+.FilesStyle > p {
+    margin: 0;
+    padding: 20px 0;
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .publicPageRightContent {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .FilesStyle ul {
+        gap: 12px;
+    }
+
+    .FilesStyle li {
+        flex: 1 1 150px;
+    }
+
+    .FilesStyle li a {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        padding: 14px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .publicPageRightContent {
+        padding: 15px;
+    }
+
+    .FilesStyle {
+        padding-top: 15px;
+    }
+
+    .FilesStyle ul {
+        gap: 10px;
+    }
+
+    .FilesStyle li {
+        flex: 1 1 100%;
+    }
+
+    .FilesStyle li a {
+        justify-content: flex-start;
+        width: 100%;
+    }
 }

@@ -1,0 +1,163 @@
+/* Main Content */
+.fileRightContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    min-width: 0;
+    /* min-height: calc(100vh - 70px); */
+    padding: 25px;
+    box-sizing: border-box;
+    gap: 20px;
+
+}
+
+/* File Heading */
+.fileRightContent #heading {
+    align-self: flex-start;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #b7bbc2;
+
+    color: #1e293b;
+    font-size: 26px;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+    box-sizing: border-box;
+}
+
+/* Main Editor Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    min-height: 450px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    background-color: #edeefb;
+    border: 1px solid #b7bbc2;
+    border-radius: 14px;
+
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+/* Textarea Section */
+.file-container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    padding: 18px;
+    box-sizing: border-box;
+    background-color: #f8fafc;
+}
+
+/* File Content Editor */
+.file-container textarea {
+    display: block;
+    width: 100%;
+    min-height: 350px;
+    flex: 1;
+    box-sizing: border-box;
+    resize: vertical;
+
+    padding: 20px;
+    border: 1px solid #b7bbc2;
+    border-radius: 10px;
+    outline: none;
+
+    background-color: #ffffff;
+    color: #334155;
+
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    tab-size: 4;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.file-container textarea:focus {
+    border-color: #9333ea;
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.10);
+}
+
+/* Bottom Controllers Section */
+.controllers {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 20px;
+    box-sizing: border-box;
+
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .fileRightContent {
+        width: 100%;
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .fileRightContent #heading {
+        font-size: 22px;
+    }
+
+    .container {
+        min-height: 400px;
+    }
+
+    .file-container {
+        padding: 12px;
+    }
+
+    .file-container textarea {
+        padding: 14px;
+        font-size: 13px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .fileRightContent {
+        padding: 14px;
+    }
+
+    .fileRightContent #heading {
+        font-size: 20px;
+    }
+
+    .container {
+        min-height: 350px;
+        border-radius: 10px;
+    }
+
+    .file-container {
+        padding: 8px;
+    }
+
+    .file-container textarea {
+        min-height: 280px;
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .controllers {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 12px;
+    }
+}

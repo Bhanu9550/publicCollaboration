@@ -2,8 +2,8 @@ import { useContext } from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import SideNavbar from '../../components/SideNavbar/SideNavbar'
 import FilesContext from '../../contexts/fileContext'
-import "./ReadFilePage.css"
 import { Link } from 'react-router-dom'
+import "./ReadFilePage.css"
 
 
 const ReadFilePage = () => {
@@ -18,7 +18,7 @@ const ReadFilePage = () => {
             <Navbar />
             <div className='HomeHeading'>
                 <SideNavbar />
-                <div className='rightContent'>
+                <div className='publicPageRightContent'>
                     <h1 id='heading'>All Files</h1>
                     <div className='FilesStyle'>
                         {Loading ? (
@@ -26,7 +26,7 @@ const ReadFilePage = () => {
                         ) : fileNames.length > 0 ? (
                             <ul>
                                 {fileNames.map((file) => (
-                                    <li key={file}><Link to={`/singlePage/${file}`}>{file}</Link></li>
+                                    <li key={file}><Link to={`/publicFiles/${file}`}>{file}</Link></li>
                                 ))}
                             </ul>
                         ) : (

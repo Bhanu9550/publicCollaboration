@@ -10,10 +10,10 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/create-file" element={<CreateFilePage />} />
-        <Route path="/read-file" element={<ReadFilePage />} />
+        <Route path="/createFiles" element={<CreateFilePage />} />
+        <Route path="/publicFiles" element={<ReadFilePage />} />
         <Route path="/test-chat" element={<Chat />} />
-        <Route path='/singlePage/:file' element={<SingleFile />} />
+        <Route path='/publicFiles/:file' element={<SingleFile />} />
       </Routes>
     </>
   )

@@ -9,10 +9,10 @@ const SideNavbar = () => {
                     <NavLink to="/">Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/create-file">My Files</NavLink>
+                    <NavLink to="/createFiles">My Files</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/read-file">Public Files</NavLink>
+                    <NavLink to="/publicFiles">Public Files</NavLink>
                 </li>
             </ul>
         </div>
