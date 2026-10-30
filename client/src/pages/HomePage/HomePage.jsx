@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import SideNavbar from '../../components/SideNavbar/SideNavbar'
 import "./HomePage.css"
 import collaborationImage from "../../assets/file image.png"
+import { Link } from 'react-router-dom'
 
 const HomePage = () => {
     return (
@@ -17,7 +18,7 @@ const HomePage = () => {
                     <p>
                         Create, edit, and share files easily. Access them anytime.
                     </p>
-                    <button className='btn-1'>Get Started</button>
+                    <Link to="/Signup" className='btn-1'>Get Started</Link>
                 </div>
 
             </div>

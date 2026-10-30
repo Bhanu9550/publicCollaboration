@@ -20,6 +20,9 @@
     background: #f8f9ff;
 }
 
+a{
+    text-decoration: none;
+}
 #heading {
     font-size: 38px;
     color: #1e1b4b;
