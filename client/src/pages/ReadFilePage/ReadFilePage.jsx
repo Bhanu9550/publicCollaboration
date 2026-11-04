@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import SideNavbar from '../../components/SideNavbar/SideNavbar'
 import FilesContext from '../../contexts/fileContext'
 import { Link } from 'react-router-dom'
-import "./ReadFilePage.css"
+import "./ReadfilePage.css"
 
 
 const ReadFilePage = () => {
